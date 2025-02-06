@@ -13,6 +13,8 @@ import Card from './Cards.js'
 const App = () => {
 
   const [menuOpen, setMenuOpen] = useState('');
+
+
   function handleMenuOpen() {
     if(menuOpen == '') {
       setMenuOpen('active');
@@ -35,10 +37,18 @@ const App = () => {
                         <li><a href="#partners">Partners</a></li>
                     </ul>
                     <div className={'hamburger' + ' ' +menuOpen} onClick={handleMenuOpen}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </div>
+                      <span className="bar"></span>
+                      <span className="bar"></span>
+                      <span className="bar"></span>
+                    </div>
+                    <div className={'nav-menu-phone'  + ' ' + menuOpen}>
+                      <ul className='nav-items'>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#features">Press</a></li>
+                          <li><a href="#team">Team</a></li>
+                          <li><a href="#partners">Partners</a></li>
+                      </ul>
+                    </div>
                 </nav>
 
             </header>
@@ -161,7 +171,9 @@ const App = () => {
                   </div>
                   <div className="top-text-2">
                     <p id="bold">From more information:</p>
-                    <p>jobs@smartdocapp.com</p>
+                    <a href="mailto:jobs@smartdocapp.com">
+                      <p>jobs@smartdocapp.com</p>
+                    </a>
                   </div>
                   </div>
               </div>
@@ -172,7 +184,9 @@ const App = () => {
                 </div> 
                 <div className="partner-bottom">
                   <p id="bold">To explore further:</p>
-                  <p>info@smartdocapp.com</p>
+                  <a href='mailto:info@smartdocapp.com'>
+                    <p>info@smartdocapp.com</p>
+                  </a>
                 </div>
               </div>
             </section>
