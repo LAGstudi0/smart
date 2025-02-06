@@ -85,6 +85,11 @@ header {
   padding: 20px 0;
   text-align: center;
   color: var(--blue);
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 
@@ -136,7 +141,7 @@ nav {
 .hero-container {
   width: 100vw;
   margin: 0;
-  padding: 0;
+  padding-top: 4rem;
 }
 
 .hero {
@@ -627,7 +632,7 @@ html, body {
   nav {
     /* flex-direction: column; */
     align-items: center;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     width: 100%;
 
   }
@@ -636,17 +641,26 @@ html, body {
     text-align: center;
     display: none;
   }
+
+  .hero-container {
+    margin-top: 5rem;
+  }
   .hero {
     width: 100%;
+    height: 55vh;
     flex-direction: column;
     text-align: center;
-    padding: 5rem 20px;
+    padding: 6rem 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
   }
   .hero h1, .hero a {
     padding: 0;
   }
   .hero-left {
     width: 100%;
+    padding-left: 1rem;
   }
   .hero-container-img {
     width: 100%;
@@ -656,12 +670,14 @@ html, body {
     width: 80%;
   }
   .hero-container-img img {
+    padding-top: 5rem;
     width: 70%;
-    text-align: center;
-    position: absolute;
-    top: 55%;
+    text-align: right;
+    position:absolute;
+    top: 40vh;
     right: 1%;
     margin-top: -80px;
+
   }
   .green{
     flex-direction: column;
@@ -671,6 +687,8 @@ html, body {
   }
   #green {
     padding-bottom: 1rem ;
+    padding: 2rem 10vw;
+
   }
   .green-left, .green-right {
     width: 100%;
