@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/smart/static/css/main.393f6465.css",
+    "main.js": "/smart/static/js/main.c1f05edd.js",
+    "static/media/mockup-screens.png": "/smart/static/media/mockup-screens.c7851bb0df3b035d5f84.png",
+    "static/media/img-1.jpeg": "/smart/static/media/img-1.41de114fa493885ac31a.jpeg",
+    "static/media/sikka-featured.jpg": "/smart/static/media/sikka-featured.25ebc1843700ce71d4e9.jpg",
+    "static/media/Inter_18pt-Light.ttf": "/smart/static/media/Inter_18pt-Light.8583bd6fce14da34ea43.ttf",
+    "static/media/Inter_18pt-ExtraLight.ttf": "/smart/static/media/Inter_18pt-ExtraLight.9c52fd6f7cd85eb278b2.ttf",
+    "static/media/Inter_18pt-Medium.ttf": "/smart/static/media/Inter_18pt-Medium.c51b145d8cf66a74cc74.ttf",
+    "static/media/iChart.jpeg": "/smart/static/media/iChart.8bda8879da6696f63bfe.jpeg",
+    "static/media/tennis.webp": "/smart/static/media/tennis.2a6d9aff84f79071f50b.webp",
+    "static/media/whiteLogo.png": "/smart/static/media/whiteLogo.05541f1136a8f709e637.png",
+    "index.html": "/smart/index.html",
+    "main.393f6465.css.map": "/smart/static/css/main.393f6465.css.map",
+    "main.c1f05edd.js.map": "/smart/static/js/main.c1f05edd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.393f6465.css",
+    "static/js/main.c1f05edd.js"
+  ]
+}
