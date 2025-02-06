@@ -619,7 +619,7 @@ html, body {
 /* hamburguer  */
 .hamburger {
   display: block;
-  z-index: 3;
+  z-index: 10;
 }
 
 
@@ -629,7 +629,7 @@ html, body {
 }
 
 header {
-  z-index: 100;
+  /* z-index: 1; */
 }
 
 /* .hamburger.active .bar:nth-child(2) {
@@ -650,7 +650,7 @@ header {
     align-items: center;
     /* padding-bottom: 4rem; */
     width: 100%;
-    
+    z-index: 10;
   }
 
   .logo {
@@ -666,6 +666,7 @@ header {
     margin-top: 5rem;
     padding-bottom: 2rem;
     padding-top:6rem ;
+    /* z-index: 2; */
   }
   .hero {
     width: 100%;
@@ -824,7 +825,7 @@ header {
   top: -100%;
   padding-top: 70px;
   font-size: 2rem;
-  z-index: 0;
+  z-index: 8;
   gap: 0;
   flex-direction: column;
   background: var(--blue);
@@ -833,6 +834,8 @@ header {
   width: 100%;
   text-align: center;
   transition: 0.3s;
+  text-decoration: none !important;
+
 }
 
 .nav-menu-phone .nav-items {
@@ -841,11 +844,18 @@ header {
   flex-direction: column;
   /* align-items: ; */
   justify-content: space-around;
+  text-decoration: none !important;
+
 }
 
-.nav-items li a{
+.nav-menu-phone .nav-items li a{
   color: white;
-  text-decoration: none;
+  text-decoration: none !important;
+
+}
+
+.nav-items {
+  list-style: none;
 }
 
 .nav-menu-phone.active {

@@ -41,18 +41,18 @@ const App = () => {
                       <span className="bar"></span>
                       <span className="bar"></span>
                     </div>
-                    <div className={'nav-menu-phone'  + ' ' + menuOpen}>
+
+                </nav>
+
+            </header>
+            <div className={'nav-menu-phone'  + ' ' + menuOpen}>
                       <ul className='nav-items'>
                           <li><a href="#about">About</a></li>
                           <li><a href="#features">Press</a></li>
                           <li><a href="#team">Team</a></li>
                           <li><a href="#partners">Partners</a></li>
                       </ul>
-                    </div>
-                </nav>
-
-            </header>
-            
+                </div>
             <div className="hero-container">
               <section className="hero">
                   <div className="hero-left">
