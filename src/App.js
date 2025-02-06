@@ -28,13 +28,13 @@ const App = () => {
             <header>
                 <nav>
                     <div className="logo">
-                    <img src={Logo} alt="logo" className="logo-icon"/>
+                    <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
                     </div>
                     <ul className='nav-links'>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Press</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#partners">Partners</a></li>
+                        <li><a className="anchor" href="#about">About</a></li>
+                        <li><a className="anchor" href="#press">Press</a></li>
+                        <li><a className="anchor" href="#contact">Team</a></li>
+                        <li><a className="anchor" href="#patients">Patients</a></li>
                     </ul>
                     <div className={'hamburger' + ' ' +menuOpen} onClick={handleMenuOpen}>
                       <span className="bar"></span>
@@ -47,13 +47,13 @@ const App = () => {
             </header>
             <div className={'nav-menu-phone'  + ' ' + menuOpen}>
                       <ul className='nav-items'>
-                          <li><a href="#about">About</a></li>
-                          <li><a href="#features">Press</a></li>
-                          <li><a href="#team">Team</a></li>
-                          <li><a href="#partners">Partners</a></li>
+                          <li><a className="anchor" onClick={handleMenuOpen} href="#about">About</a></li>
+                          <li><a className="anchor" onClick={handleMenuOpen} href="#press">Press</a></li>
+                          <li><a className="anchor" onClick={handleMenuOpen} href="#contact">Team</a></li>
+                          <li><a className="anchor" onClick={handleMenuOpen} href="#patients">Patients</a></li>
                       </ul>
                 </div>
-            <div className="hero-container">
+            <div id="main-banner" className="hero-container">
               <section className="hero">
                   <div className="hero-left">
                     <h1>Immediate access to your full medical records and personalized health recommendations.</h1>
@@ -142,17 +142,17 @@ const App = () => {
               <Card
               title="The Story of Robby Sikka, Doctor and Leader in the NBA"
               image={TeamTalk}
-              url="#"
+              url="https://www.slamonline.com/the-magazine/robby-sikka-profile/"
             />
             <Card
               title="Report shows tennis night matches lead to increased injury risk"
               image={Chart}
-              url="#"
+              url="https://www.espn.com/tennis/story/_/id/41210444/report-shows-tennis-night-matches-lead-increased-injury-risk"
             />
             <Card
               title="Tennis Injuries Keep Coming As PTPA Publishes Player Welfare Report"
               image={Tennis}
-              url="#"
+              url="https://www.forbes.com/sites/timellis/2024/10/01/tennis-injuries-keep-coming-as-ptpa-publishes-player-welfare-report/"
             />
                     </div>
                 </div>
@@ -170,7 +170,7 @@ const App = () => {
                     <p>Join our dynamic team at SMART, where you'll collaborate with industry leaders to revolutionize healthcare and wellness through our cutting-edge data and technology solutions.</p>
                   </div>
                   <div className="top-text-2">
-                    <p id="bold">From more information:</p>
+                    <p id="bold">For more information:</p>
                     <a href="mailto:jobs@smartdocapp.com">
                       <p>jobs@smartdocapp.com</p>
                     </a>
