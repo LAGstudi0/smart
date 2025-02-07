@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {createRoot} from 'react-dom/client';
 import Logo from './images/whiteLogo.png';
 import Phone from './images/mockup-screens.png';
@@ -13,6 +13,30 @@ import Card from './Cards.js'
 const App = () => {
 
   const [menuOpen, setMenuOpen] = useState('');
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentScrollTop = window.scrollY;
+
+      if (currentScrollTop > lastScrollTop && currentScrollTop > 50) {
+        // Scrolling down, hide the header
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up, show the header
+        setIsHeaderVisible(true);
+      }
+
+      setLastScrollTop(currentScrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
 
 
   function handleMenuOpen() {
@@ -21,11 +45,20 @@ const App = () => {
     } else {
       setMenuOpen('')
     }
+
+    if (!menuOpen) {
+      document.body.classList.add('no-scroll'); // Disable scroll
+    } else {
+      document.body.classList.remove('no-scroll'); // Enable scroll
+    }
+
+
+
   }
     return (
         <div >
 
-            <header>
+            <header className={isHeaderVisible ? "" : "header-hidden"}>
                 <nav>
                     <div className="logo">
                     <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
