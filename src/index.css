@@ -47,8 +47,9 @@
 
 /* fix safari issue of pressing the anchor and the header still appearing */
 @supports (-webkit-touch-callout: none) {
-  header {
-    will-change: transform, opacity;
+  header.header-hidden {
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
   }
 }
 /* makes the anchor links run smooth */
@@ -117,9 +118,12 @@ header {
 
 .header-hidden {
   transform: translateY(-100%);
+}
 
-
-
+header.header-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform; /* Forces Safari to recognize the transform */
 }
 
 
@@ -661,10 +665,6 @@ html, body {
   cursor: pointer;
 }
 
-header.header-hidden {
-    transform: translateY(-100%);
-  
-}
 /* .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
