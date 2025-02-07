@@ -116,14 +116,15 @@ header {
   transition: transform 0.3s ease-in-out;
 }
 
-.header-hidden {
+/* .header-hidden {
   transform: translateY(-100%);
-}
+} */
 
 header.header-hidden {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-  will-change: transform; /* Forces Safari to recognize the transform */
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  will-change: transform, opacity;
 }
 
 
