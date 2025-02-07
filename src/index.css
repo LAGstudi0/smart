@@ -45,8 +45,11 @@
 
 /* Anchor links */
 
-a.anchor {
-
+/* fix safari issue of pressing the anchor and the header still appearing */
+@supports (-webkit-touch-callout: none) {
+  header {
+    will-change: transform, opacity;
+  }
 }
 /* makes the anchor links run smooth */
 html {
