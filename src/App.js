@@ -15,40 +15,6 @@ const App = () => {
   const [menuOpen, setMenuOpen] = useState('');
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  
-
-  const handleAnchorClick = (event) => {
-    event.preventDefault();
-
-    const targetId = event.target.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        const isMobile = window.innerWidth <= 820; // Define mobile screen width
-        const currentScrollTop = window.scrollY;
-        const offset = isMobile ? 0 : 80; // No offset on mobile, 80px offset on desktop
-
-        if (targetPosition < currentScrollTop) {
-            // Scrolling UP - Apply offset
-            window.scrollTo({
-                top: targetPosition - offset,
-                behavior: "smooth"
-            });
-        } else {
-            // Scrolling DOWN - No offset
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-        }
-
-        // Close the mobile menu when clicking an anchor link
-        setMenuOpen("");
-        document.body.classList.remove("no-scroll");
-    }
-};
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,12 +47,11 @@ const App = () => {
     }
 
     if (!menuOpen) {
-      document.body.classList.add('no-scroll'); // Disable scroll
-    } else {
-      document.body.classList.remove('no-scroll'); // Enable scroll
-    }
+    document.body.classList.add('no-scroll'); // Disable scroll
+  } else {
+    document.body.classList.remove('no-scroll'); // Enable scroll
+  }
 
-    
 
 
   }
@@ -99,10 +64,10 @@ const App = () => {
                     <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
                     </div>
                     <ul className='nav-links'>
-                        <li><a className="anchor" href="#about" onClick={handleAnchorClick}>About</a></li>
-                        <li><a className="anchor" href="#press" onClick={handleAnchorClick}>Press</a></li>
-                        <li><a className="anchor" href="#contact" onClick={handleAnchorClick}>Team</a></li>
-                        <li><a className="anchor" href="#patients" onClick={handleAnchorClick}>Patients</a></li>
+                        <li><a className="anchor" href="#about">About</a></li>
+                        <li><a className="anchor" href="#press">Press</a></li>
+                        <li><a className="anchor" href="#contact">Team</a></li>
+                        <li><a className="anchor" href="#patients">Patients</a></li>
                     </ul>
                     <div className={'hamburger' + ' ' +menuOpen} onClick={handleMenuOpen}>
                       <span className="bar"></span>
@@ -137,7 +102,7 @@ const App = () => {
                 <div className="green-left">
                   <h3>Our mission is to provide a platform for all patients to have immediate access to personalized medical support at your fingertips.</h3>
                 </div>
-                <div className="green-right">
+                <div class="green-right">
                   <p>Using personalized data analytics and artificial intelligence, SMART provides individualized, relevant, and proactive analytics, connectivity, and coaching on your personal health journey through our user-friendly app.</p>
                 </div>
             </section>
@@ -184,10 +149,10 @@ const App = () => {
                   </div>
                   <div className="media-container">
                     <div className="media-video">
-                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171546806651199489?compact=1" scrolling="no" height='560px' frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
+                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171546806651199489?compact=1" scrolling="no" height='560px' frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                     </div>
                     <div className="media-video">
-                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7169790655362228226?compact=1" scrolling="no" height='560px' frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
+                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7169790655362228226?compact=1" scrolling="no" height='560px' frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                     </div>
                   </div>
                   <div className="media-title">
