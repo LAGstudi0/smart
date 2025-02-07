@@ -102,7 +102,7 @@ const App = () => {
                         <li><a className="anchor" href="#about" onClick={handleAnchorClick}>About</a></li>
                         <li><a className="anchor" href="#press" onClick={handleAnchorClick}>Press</a></li>
                         <li><a className="anchor" href="#contact" onClick={handleAnchorClick}>Team</a></li>
-                        <li><a className="anchor" href="#patients">Patients</a></li>
+                        <li><a className="anchor" href="#patients" onClick={handleAnchorClick}>Patients</a></li>
                     </ul>
                     <div className={'hamburger' + ' ' +menuOpen} onClick={handleMenuOpen}>
                       <span className="bar"></span>
@@ -125,7 +125,7 @@ const App = () => {
               <section className="hero">
                   <div className="hero-left">
                     <h1>Immediate access to your full medical records and personalized health recommendations.</h1>
-                    <div><a className="find-out" href="#about" onClick={handleAnchorClick}>Find out how</a></div>
+                    <div><a className="find-out" href="#about">Find out how</a></div>
                   </div>
                   <div className="hero-container-img">
                     <img className="phone-mockup" src={Phone} alt="phone" />
@@ -137,7 +137,7 @@ const App = () => {
                 <div className="green-left">
                   <h3>Our mission is to provide a platform for all patients to have immediate access to personalized medical support at your fingertips.</h3>
                 </div>
-                <div class="green-right">
+                <div className="green-right">
                   <p>Using personalized data analytics and artificial intelligence, SMART provides individualized, relevant, and proactive analytics, connectivity, and coaching on your personal health journey through our user-friendly app.</p>
                 </div>
             </section>
@@ -184,10 +184,10 @@ const App = () => {
                   </div>
                   <div className="media-container">
                     <div className="media-video">
-                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171546806651199489?compact=1" scrolling="no" height='560px' frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171546806651199489?compact=1" scrolling="no" height='560px' frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
                     </div>
                     <div className="media-video">
-                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7169790655362228226?compact=1" scrolling="no" height='560px' frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                      <iframe className="link-video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7169790655362228226?compact=1" scrolling="no" height='560px' frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
                     </div>
                   </div>
                   <div className="media-title">
