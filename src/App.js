@@ -19,33 +19,35 @@ const App = () => {
 
   const handleAnchorClick = (event) => {
     event.preventDefault();
-    
+
     const targetId = event.target.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
-  
+
     if (targetElement) {
-      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-      const offset = 80; // Adjust this value for your header height
-  
-      if (targetPosition < window.scrollY) {
-        // If scrolling UP, apply offset
-        window.scrollTo({
-          top: targetPosition - offset,
-          behavior: "smooth"
-        });
-      } else {
-        // If scrolling DOWN, no offset needed
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth"
-        });
-      }
-  
-      // Close the mobile menu when clicking an anchor link
-      setMenuOpen("");
-      document.body.classList.remove("no-scroll");
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const isMobile = window.innerWidth <= 820; // Define mobile screen width
+        const currentScrollTop = window.scrollY;
+        const offset = isMobile ? 0 : 80; // No offset on mobile, 80px offset on desktop
+
+        if (targetPosition < currentScrollTop) {
+            // Scrolling UP - Apply offset
+            window.scrollTo({
+                top: targetPosition - offset,
+                behavior: "smooth"
+            });
+        } else {
+            // Scrolling DOWN - No offset
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+            });
+        }
+
+        // Close the mobile menu when clicking an anchor link
+        setMenuOpen("");
+        document.body.classList.remove("no-scroll");
     }
-  };
+};
   
 
   useEffect(() => {
