@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/smart/static/css/main.a89fd2c2.css",
-    "main.js": "/smart/static/js/main.f4fc3a5f.js",
+    "main.css": "/smart/static/css/main.90acf8ec.css",
+    "main.js": "/smart/static/js/main.617326e2.js",
     "static/media/mockup-screens.png": "/smart/static/media/mockup-screens.c7851bb0df3b035d5f84.png",
     "static/media/img-1.jpeg": "/smart/static/media/img-1.41de114fa493885ac31a.jpeg",
     "static/media/sikka-featured.jpg": "/smart/static/media/sikka-featured.25ebc1843700ce71d4e9.jpg",
@@ -12,11 +12,11 @@
     "static/media/tennis.webp": "/smart/static/media/tennis.2a6d9aff84f79071f50b.webp",
     "static/media/whiteLogo.png": "/smart/static/media/whiteLogo.05541f1136a8f709e637.png",
     "index.html": "/smart/index.html",
-    "main.a89fd2c2.css.map": "/smart/static/css/main.a89fd2c2.css.map",
-    "main.f4fc3a5f.js.map": "/smart/static/js/main.f4fc3a5f.js.map"
+    "main.90acf8ec.css.map": "/smart/static/css/main.90acf8ec.css.map",
+    "main.617326e2.js.map": "/smart/static/js/main.617326e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.a89fd2c2.css",
-    "static/js/main.f4fc3a5f.js"
+    "static/css/main.90acf8ec.css",
+    "static/js/main.617326e2.js"
   ]
 }
