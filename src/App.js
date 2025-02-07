@@ -15,6 +15,38 @@ const App = () => {
   const [menuOpen, setMenuOpen] = useState('');
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  
+
+  const handleAnchorClick = (event) => {
+    event.preventDefault();
+    
+    const targetId = event.target.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+  
+    if (targetElement) {
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const offset = 80; // Adjust this value for your header height
+  
+      if (targetPosition < window.scrollY) {
+        // If scrolling UP, apply offset
+        window.scrollTo({
+          top: targetPosition - offset,
+          behavior: "smooth"
+        });
+      } else {
+        // If scrolling DOWN, no offset needed
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+  
+      // Close the mobile menu when clicking an anchor link
+      setMenuOpen("");
+      document.body.classList.remove("no-scroll");
+    }
+  };
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +71,7 @@ const App = () => {
   }, [lastScrollTop]);
 
 
-  function handleMenuOpen() {
+  function handleMenuOpen(event) {
     if(menuOpen == '') {
       setMenuOpen('active');
     } else {
@@ -52,6 +84,7 @@ const App = () => {
       document.body.classList.remove('no-scroll'); // Enable scroll
     }
 
+    
 
 
   }
@@ -64,9 +97,9 @@ const App = () => {
                     <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
                     </div>
                     <ul className='nav-links'>
-                        <li><a className="anchor" href="#about">About</a></li>
-                        <li><a className="anchor" href="#press">Press</a></li>
-                        <li><a className="anchor" href="#contact">Team</a></li>
+                        <li><a className="anchor" href="#about" onClick={handleAnchorClick}>About</a></li>
+                        <li><a className="anchor" href="#press" onClick={handleAnchorClick}>Press</a></li>
+                        <li><a className="anchor" href="#contact" onClick={handleAnchorClick}>Team</a></li>
                         <li><a className="anchor" href="#patients">Patients</a></li>
                     </ul>
                     <div className={'hamburger' + ' ' +menuOpen} onClick={handleMenuOpen}>
