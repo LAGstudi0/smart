@@ -46,12 +46,7 @@
 /* Anchor links */
 
 /* fix safari issue of pressing the anchor and the header still appearing */
-@supports (-webkit-touch-callout: none) {
-  header.header-hidden {
-    transform: translateY(-100%) !important;
-    opacity: 0 !important;
-  }
-}
+
 /* makes the anchor links run smooth */
 html {
   scroll-behavior: smooth;
@@ -101,10 +96,10 @@ body.no-scroll {
 }
 
 /*Navigation */
-header {
+/* header {
   justify-content: space-evenly;
   background-color: var(--blue);
-  /* padding: 20px 0; */
+
   padding-top: 1rem;
   text-align: center;
   color: var(--blue);
@@ -114,19 +109,66 @@ header {
   width: 100%;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
+} */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 1rem;
+  /* Remove direct background-color */
+  /* background-color: var(--blue); */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blue);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
+  z-index: -1; /* Place it behind the header content */
+}
+
+header.header-hidden {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+
+header.header-hidden::after {
+  opacity: 0;
+}
+
+
 
 /* .header-hidden {
   transform: translateY(-100%);
 } */
 
-header.header-hidden {
+/* header.header-hidden {
   transform: translate3d(0, -100%, 0);
   opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  will-change: transform, opacity;
+  background-color: transparent;
 }
 
+header, 
+header.header-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+} */
+
+header {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
 
 nav {
   display: flex;
@@ -147,6 +189,7 @@ nav {
 }
 
 .nav-links {
+  padding-bottom: 1rem;
 
   list-style: none;
   display: flex;
