@@ -71,7 +71,7 @@ const App = () => {
   }, [lastScrollTop]);
 
 
-  function handleMenuOpen(event) {
+  function handleMenuOpen() {
     if(menuOpen == '') {
       setMenuOpen('active');
     } else {
