@@ -112,11 +112,11 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition:0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header-hidden {
-  top: -100%;
+  transform: translateY(-100%);
 }
 
 
@@ -658,10 +658,10 @@ html, body {
   cursor: pointer;
 }
 
-header {
-  /* z-index: 1; */
+header.header-hidden {
+    transform: translateY(-100%);
+  
 }
-
 /* .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
