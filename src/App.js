@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {createRoot} from 'react-dom/client';
 import Logo from './images/whiteLogo.png';
 import Phone from './images/mockup-screens.png';
@@ -13,44 +13,16 @@ import Card from './Cards.js'
 const App = () => {
 
   const [menuOpen, setMenuOpen] = useState('');
-  const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let currentScrollTop = window.scrollY;
-
-      if (currentScrollTop > lastScrollTop && currentScrollTop > 50) {
-        // Scrolling down, hide the header
-        setIsHeaderVisible(false);
-      } else {
-        // Scrolling up, show the header
-        setIsHeaderVisible(true);
-      }
-
-      setLastScrollTop(currentScrollTop);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop]);
 
 
   function handleMenuOpen() {
-    if(menuOpen === '') {
+    if(menuOpen == '') {
       setMenuOpen('active');
     } else {
       setMenuOpen('')
     }
-
-    if (!menuOpen) {
-    document.body.classList.add('no-scroll'); // Disable scroll
-  } else {
-    document.body.classList.remove('no-scroll'); // Enable scroll
-  }
 
 
 
@@ -58,7 +30,7 @@ const App = () => {
     return (
         <div >
 
-            <header className={isHeaderVisible ? "" : "header-hidden"}>
+            <header>
                 <nav>
                     <div className="logo">
                     <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
@@ -102,7 +74,7 @@ const App = () => {
                 <div className="green-left">
                   <h3>Our mission is to provide a platform for all patients to have immediate access to personalized medical support at your fingertips.</h3>
                 </div>
-                <div className="green-right">
+                <div class="green-right">
                   <p>Using personalized data analytics and artificial intelligence, SMART provides individualized, relevant, and proactive analytics, connectivity, and coaching on your personal health journey through our user-friendly app.</p>
                 </div>
             </section>
