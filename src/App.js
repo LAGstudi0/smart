@@ -21,26 +21,22 @@ const App = () => {
   const headerHeightRef = useRef(0);
   const lastScrollTop = useRef(0);
 
-  // After the header mounts, store its height.
+  // Store header height after mounting
   useEffect(() => {
     if (headerRef.current) {
       headerHeightRef.current = headerRef.current.offsetHeight;
     }
   }, []);
 
-  // Scroll event to toggle headerVisible
+  // Scroll event to update headerVisible
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      
-      // Always show header at the very top
       if (currentScrollPos <= 0) {
         setHeaderVisible(true);
       } else if (currentScrollPos < lastScrollTop.current) {
-        // Scrolling up
         setHeaderVisible(true);
       } else {
-        // Scrolling down
         setHeaderVisible(false);
       }
       lastScrollTop.current = currentScrollPos;
@@ -55,17 +51,25 @@ const App = () => {
     setMenuOpen((prev) => (prev === '' ? 'active' : ''));
   }
 
-  // Handle anchor link clicks:
-  // Subtract header's height only if headerVisible is true.
+  // Detect if the user is on iOS
+  function isiOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent);
+  }
+
+  // Updated anchor click handler:
   function handleAnchorClick(e) {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
     if (!targetElement) return;
 
-    // Use header's height only if visible; otherwise, offset is 0.
-    const offset = headerVisible ? headerHeightRef.current : 0;
+    // If on iOS, add a temporary class to force the header background to transparent.
+    if (isiOS() && headerRef.current) {
+      headerRef.current.classList.add("header-anchor-hide");
+    }
 
+    // Determine the offset only when header is visible.
+    const offset = headerVisible ? headerHeightRef.current : 0;
     const elementPosition = targetElement.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -73,6 +77,13 @@ const App = () => {
       top: offsetPosition,
       behavior: "smooth",
     });
+
+    // Remove the temporary class after a delay (adjust timing if needed)
+    setTimeout(() => {
+      if (headerRef.current) {
+        headerRef.current.classList.remove("header-anchor-hide");
+      }
+    }, 500);
   }
 
     return (
