@@ -94,39 +94,35 @@ body {
 /*Navigation */
 header {
   justify-content: space-evenly;
+  background-color: var(--blue);
+  /* padding: 20px 0; */
+  padding-top: 1rem;
   text-align: center;
+
   position:fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 6.5rem;
   z-index: 1000;
-  will-change: transform, top;
+  /* will-change: transform, top; */
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 header.header-hidden {
-
-  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: transparent;
+
 }
 
 /* When the header is visible (in its normal position) */
 header.header-visible {
 
-  -webkit-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: var(--header-bg, #0A2240);
 }
 
 
 nav {
-  background-color: var(--blue);
-  /* padding-top: 1rem; */
-  padding: 1rem;
-  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   /* background-color: #0A2240; */
@@ -175,6 +171,7 @@ nav {
   width: 100vw;
   margin: 0;
   padding-top: 6rem;
+  margin-top: -4rem;
 }
 
 .hero {
