@@ -108,17 +108,20 @@ header {
   transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
+/* Your existing visible/hidden classes */
+header.header-visible {
+  transform: translateY(0);
+  background-color: var(--header-bg, #0A2240);
+}
+
 header.header-hidden {
   transform: translateY(-100%);
   background-color: transparent;
-
 }
 
-/* When the header is visible (in its normal position) */
-header.header-visible {
-
-  transform: translateY(0);
-  background-color: var(--header-bg, #0A2240);
+/* Temporary class for iOS anchor clicks */
+header.header-anchor-hide {
+  background-color: transparent !important;
 }
 
 
