@@ -104,17 +104,21 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  
+  will-change: transform, top;
 }
 
 header.header-hidden {
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
 
 /* When the header is visible (in its normal position) */
 header.header-visible {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
 
