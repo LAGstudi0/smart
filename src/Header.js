@@ -8,8 +8,7 @@ export default function Header(props, ref) {
 
    return <header
    ref={ref}
-   className={props.headerVisible ? "header-visible" : "header-hidden"}
- >
+   className={props.headerVisible ? "header-visible" : "header-hidden"}>
    <nav>
      <div className="logo">
        <a href="#main-banner" onClick={props.handleAnchorClick}>

@@ -94,21 +94,18 @@ body {
 /*Navigation */
 header {
   justify-content: space-evenly;
-  background-color: var(--blue);
-  /* padding: 20px 0; */
-  padding-top: 1rem;
   text-align: center;
-  color: var(--blue);
   position:fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 6.5rem;
   z-index: 1000;
   will-change: transform, top;
 }
 
 header.header-hidden {
-  top: -100%;  /* Adjust this if your header isn’t 100% of its own height */
+
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -117,7 +114,7 @@ header.header-hidden {
 
 /* When the header is visible (in its normal position) */
 header.header-visible {
-  top: 0;
+
   -webkit-transform: translateY(0);
   transform: translateY(0);
   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -126,11 +123,16 @@ header.header-visible {
 
 
 nav {
+  background-color: var(--blue);
+  /* padding-top: 1rem; */
+  padding: 1rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   /* background-color: #0A2240; */
   align-items: center;
   padding: 0 50px;
+  height: 100%;
 }
 
 .logo {
