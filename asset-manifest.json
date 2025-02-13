@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/smart/static/css/main.213a1f97.css",
+    "main.css": "/smart/static/css/main.7815781d.css",
     "main.js": "/smart/static/js/main.23c2b2ad.js",
     "static/media/mockup-screens.png": "/smart/static/media/mockup-screens.c7851bb0df3b035d5f84.png",
     "static/media/img-1.jpeg": "/smart/static/media/img-1.41de114fa493885ac31a.jpeg",
@@ -12,11 +12,11 @@
     "static/media/tennis.webp": "/smart/static/media/tennis.2a6d9aff84f79071f50b.webp",
     "static/media/whiteLogo.png": "/smart/static/media/whiteLogo.05541f1136a8f709e637.png",
     "index.html": "/smart/index.html",
-    "main.213a1f97.css.map": "/smart/static/css/main.213a1f97.css.map",
+    "main.7815781d.css.map": "/smart/static/css/main.7815781d.css.map",
     "main.23c2b2ad.js.map": "/smart/static/js/main.23c2b2ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.213a1f97.css",
+    "static/css/main.7815781d.css",
     "static/js/main.23c2b2ad.js"
   ]
 }
