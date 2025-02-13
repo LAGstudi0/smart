@@ -1,4 +1,4 @@
-import Phone from './images/mockup-screens.png';
+import Phone from '../images/mockup-screens.png';
 
 
 export default function Hero() {

@@ -26,10 +26,10 @@ export default function Header(props) {
                         <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
                         </div>
                         <ul className='nav-links'>
-                            <li><a className="anchor" href="#about">About</a></li>
-                            <li><a className="anchor" href="#press">Press</a></li>
-                            <li><a className="anchor" href="#contact">Team</a></li>
-                            <li><a className="anchor" href="#patients">Patients</a></li>
+                            <li><a className="anchor" href="/smart#about">About</a></li>
+                            <li><a className="anchor" href="/smart#press">Press</a></li>
+                            <li><a className="anchor" href="/smart#contact">Team</a></li>
+                            <li><a className="anchor" href="/smart#patients">Patients</a></li>
                         </ul>
                         <div className={'hamburger' + ' ' +props.classAdd} onClick={props.onHandleClick}>
                           <span className="bar"></span>

@@ -1,4 +1,4 @@
-import Talking from './images/img-1.jpeg';
+import Talking from '../images/img-1.jpeg';
 
 
 export default function About() {

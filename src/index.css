@@ -903,3 +903,28 @@ header {
   /* left: 0; */
 
 }
+
+
+
+/* PTPA press content */
+.press-article-container {
+  margin-top: 2rem;
+  width: 100vw;
+  padding: 5rem 10vw;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: 'inter-thin';
+  /* background-color: var(--white); */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title-press-article {
+  font-family: 'inter-fat';
+}
+
+.content-press-article {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,6 +1,8 @@
-import TeamTalk from './images/sikka-featured.jpg';
-import Chart from './images/iChart.jpeg'
-import Tennis from './images/tennis.webp'
+import { Link } from "react-router-dom";
+
+import TeamTalk from '../images/sikka-featured.jpg';
+import Chart from '../images/iChart.jpeg'
+import Tennis from '../images/tennis.webp'
 import Card from './Cards.js'
 
 export default function Press() {
@@ -13,12 +15,12 @@ export default function Press() {
                     <div className="one-article">
                         <h2>PTPA Launches Groundbreaking Medical Network, Underscoring Its Commitment to Protecting Player Health and Safety</h2>
                         <p>03/01/24</p>
-                        <a href="#">Read More</a>
+                        <Link to="/PTPAPress">Read More</Link>
                       </div>
                     <div className="one-article">
                         <h2>Press Release</h2>
                         <p>12/14/23</p>
-                        <a href="#">Read More</a>
+                        <Link to="/PressRelease">Read More</Link>
                     </div>
                     </div>
                     <div className="divider"></div>

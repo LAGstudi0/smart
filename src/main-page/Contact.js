@@ -1,4 +1,4 @@
-import TeamTalk from './images/sikka-featured.jpg';
+import TeamTalk from '../images/sikka-featured.jpg';
 
 
 export default function Contact() {
