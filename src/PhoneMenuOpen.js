@@ -2,31 +2,27 @@ import React from "react";
 
 export default function PhoneMenuOpen(props) {
   // Combine closing the menu and scrolling to the anchor.
-  const handleClick = (e) => {
-    props.onHandleClick();
-    props.handleAnchorClick(e);
-  };
 
   return (
     <div className={`nav-menu-phone ${props.classAdd}`}>
       <ul className="nav-items">
         <li>
-          <a className="anchor" onClick={handleClick} href="#about">
+          <a className="anchor" onClick={props.onHandleClick} href="#about">
             About
           </a>
         </li>
         <li>
-          <a className="anchor" onClick={handleClick} href="#press">
+          <a className="anchor" onClick={props.onHandleClick} href="#press">
             Press
           </a>
         </li>
         <li>
-          <a className="anchor" onClick={handleClick} href="#contact">
+          <a className="anchor" onClick={props.onHandleClick} href="#contact">
             Team
           </a>
         </li>
         <li>
-          <a className="anchor" onClick={handleClick} href="#patients">
+          <a className="anchor" onClick={props.onHandleClick} href="#patients">
             Patients
           </a>
         </li>
