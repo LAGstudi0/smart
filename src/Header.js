@@ -23,7 +23,7 @@ export default function Header(props) {
    return <header>
                     <nav>
                         <div className="logo">
-                        <a href='#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
+                        <a href='/smart#main-banner'><img src={Logo} alt="logo" className="logo-icon"/></a>
                         </div>
                         <ul className='nav-links'>
                             <li><a className="anchor" href="/smart#about">About</a></li>
