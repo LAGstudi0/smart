@@ -623,10 +623,20 @@ section {
 footer {
   margin-top: -1.2rem;
   text-align: left;
-  padding: 20px 3rem;
-  font-family: 'inter-nav';
+  padding: 20px 10vw;
   background-color: var(--blue);
   color: white;
+}
+
+footer a {
+  font-family: 'inter-nav';
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--green);
 }
 
 html, body {
