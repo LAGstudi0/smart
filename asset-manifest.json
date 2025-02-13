@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/smart/static/css/main.b47ea373.css",
-    "main.js": "/smart/static/js/main.61940540.js",
+    "main.js": "/smart/static/js/main.1fad0682.js",
     "static/media/mockup-screens.png": "/smart/static/media/mockup-screens.c7851bb0df3b035d5f84.png",
     "static/media/img-1.jpeg": "/smart/static/media/img-1.41de114fa493885ac31a.jpeg",
     "static/media/sikka-featured.jpg": "/smart/static/media/sikka-featured.25ebc1843700ce71d4e9.jpg",
@@ -13,10 +13,10 @@
     "static/media/whiteLogo.png": "/smart/static/media/whiteLogo.05541f1136a8f709e637.png",
     "index.html": "/smart/index.html",
     "main.b47ea373.css.map": "/smart/static/css/main.b47ea373.css.map",
-    "main.61940540.js.map": "/smart/static/js/main.61940540.js.map"
+    "main.1fad0682.js.map": "/smart/static/js/main.1fad0682.js.map"
   },
   "entrypoints": [
     "static/css/main.b47ea373.css",
-    "static/js/main.61940540.js"
+    "static/js/main.1fad0682.js"
   ]
 }
